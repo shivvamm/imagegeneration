@@ -21,7 +21,6 @@ const Home = () => {
   const [searchedResults, setSearchedResults] = useState(null);
 
   const fetchPosts = async () => {
-    setLoading(true);
 
     try {
       const response = await fetch('https://dalle-od4n.onrender.com/api/v1/post', {
@@ -38,7 +37,6 @@ const Home = () => {
     } catch (err) {
       alert(err);
     } finally {
-      setLoading(false);
     }
   };
 
